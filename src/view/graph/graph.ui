@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Graph</class>
+ <widget class="QWidget" name="Graph">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>561</width>
+    <height>431</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #202020;</string>
+  </property>
+  <widget class="QLabel" name="xMinLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>390</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>X Min</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="yMin">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>390</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDoubleSpinBox {
+background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QDoubleSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QDoubleSpinBox::up-button { width: 0px;
+border:0;
+}
+
+QDoubleSpinBox::down-button { width: 0px;
+border: 0;
+}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="minimum">
+    <double>-1000000.000000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>-0.500000000000000</double>
+   </property>
+   <property name="value">
+    <double>-10.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonGraph">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>390</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+   </property>
+   <property name="text">
+    <string>graph</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="yMax">
+   <property name="geometry">
+    <rect>
+     <x>259</x>
+     <y>355</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDoubleSpinBox {
+background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QDoubleSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QDoubleSpinBox::up-button { width: 0px;
+border:0;
+}
+
+QDoubleSpinBox::down-button { width: 0px;
+border: 0;
+}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="minimum">
+    <double>0.500000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>1000000.000000000000000</double>
+   </property>
+   <property name="value">
+    <double>10.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="xMaxLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>355</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>X Max</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="xMax">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>354</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDoubleSpinBox {
+background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QDoubleSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QDoubleSpinBox::up-button { width: 0px;
+border:0;
+}
+
+QDoubleSpinBox::down-button { width: 0px;
+border: 0;
+}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="minimum">
+    <double>0.050000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>1000000.000000000000000</double>
+   </property>
+   <property name="value">
+    <double>10.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="result">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>355</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sans Serif Collection</family>
+     <pointsize>14</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #ffffff;
+color: black;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="yMinLabel">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>390</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>Y Min</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="yMaxLabel">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>355</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: white;
+padding-left: 2;
+font: 14pt &quot;Sans Serif Collection&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>Y Max</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="xMin">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>390</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDoubleSpinBox {
+background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QDoubleSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QDoubleSpinBox::up-button { width: 0px;
+border:0;
+}
+
+QDoubleSpinBox::down-button { width: 0px;
+border: 0;
+}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="minimum">
+    <double>-1000000.000000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>-0.500000000000000</double>
+   </property>
+   <property name="value">
+    <double>-10.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QCustomPlot" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>541</width>
+     <height>341</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>graph/qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

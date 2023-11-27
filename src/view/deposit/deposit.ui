@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Deposit</class>
+ <widget class="QWidget" name="Deposit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>561</width>
+    <height>431</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #202020;</string>
+  </property>
+  <widget class="QDoubleSpinBox" name="taxRate">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>130</y>
+     <width>150</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDoubleSpinBox {
+background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QDoubleSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QDoubleSpinBox::up-button { width: 20px;
+border:0;
+}
+
+QDoubleSpinBox::down-button { width: 20px;
+border: 0;
+}</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="capitatlizationCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>315</x>
+     <y>90</y>
+     <width>237</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="toolTipDuration">
+    <number>0</number>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+padding-left: 5px;
+background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QCheckBox:hover {
+background-color: #3B3B3B;
+}
+
+QRadioButton:pressed {
+background-color: #282828;
+color: #cecece;
+}
+
+QCheckBox::indicator {
+width: 14px;
+height: 14px;
+border-radius: 9px;
+border: 2px solid  #ffffff;
+}
+
+QCheckBox::indicator:checked {
+width: 10px;
+height: 10px;
+border: 4px solid  #9690c2;
+border-radius: 9px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Capitalization of interest</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="replenishmentMonth">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>37</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSpinBox {
+background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-top-left-radius: 5%;
+border-bottom-left-radius: 5%;
+margin: 2;
+}
+
+QSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QSpinBox::up-button { width: 0px;
+border:0;
+}
+
+QSpinBox::down-button { width: 0px;
+border: 0;
+}</string>
+   </property>
+   <property name="maximum">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="interestRateLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: white;
+font: 14pt &quot;Sans Serif Collection&quot;;
+padding: 1;
+}</string>
+   </property>
+   <property name="text">
+    <string>Interest rate</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="withdrawalsAddButton">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>200</y>
+     <width>150</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+   </property>
+   <property name="text">
+    <string>Withdrawals</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="taxRateLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: white;
+font: 14pt &quot;Sans Serif Collection&quot;;
+padding: 1;
+}</string>
+   </property>
+   <property name="text">
+    <string>Tax rate</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="replenishmentAddButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>150</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+   </property>
+   <property name="text">
+    <string>Replenishments</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="mothlyTerm">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>50</y>
+     <width>150</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSpinBox {
+background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QSpinBox::up-button { width: 0px;
+border:0;
+}
+
+QSpinBox::down-button { width: 0px;
+border: 0;
+}</string>
+   </property>
+   <property name="maximum">
+    <number>600</number>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="pereodicetyComboBox">
+   <property name="geometry">
+    <rect>
+     <x>315</x>
+     <y>50</y>
+     <width>237</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+background-color: #323232;
+color: #ffffff;
+padding-left: 10px;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QComboBox:hover {
+background-color: #3B3B3B;
+}
+
+QComboBox::drop-down {
+border: none;
+}
+
+QComboBox QAbstractItemView {
+background-color: #3B3B3B;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+}</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Monthly</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Quarterly</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Half-yearly</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Yearly</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QListWidget" name="withdrawalList">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>230</y>
+     <width>150</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QScrollBar:vertical {
+width: 0px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="interestRate">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>90</y>
+     <width>150</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDoubleSpinBox {
+background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QDoubleSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QDoubleSpinBox::up-button { width: 20px;
+border:0;
+}
+
+QDoubleSpinBox::down-button { width: 20px;
+border: 0;
+}</string>
+   </property>
+   <property name="minimum">
+    <double>0.000000000000000</double>
+   </property>
+   <property name="maximum">
+    <double>50.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="depositAmountLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: white;
+font: 14pt &quot;Sans Serif Collection&quot;;
+padding: 1;
+}</string>
+   </property>
+   <property name="text">
+    <string>Deposit amount</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="withdrawalAmount">
+   <property name="geometry">
+    <rect>
+     <x>194</x>
+     <y>170</y>
+     <width>117</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDoubleSpinBox {
+background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-top-right-radius: 5%;
+border-bottom-right-radius: 5%;
+margin: 2;
+}
+
+QDoubleSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QDoubleSpinBox::up-button { width: 0px;
+border:0;
+}
+
+QDoubleSpinBox::down-button { width: 0px;
+border: 0;
+}</string>
+   </property>
+   <property name="maximum">
+    <double>0.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="replenishmentAmount">
+   <property name="geometry">
+    <rect>
+     <x>44</x>
+     <y>170</y>
+     <width>117</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDoubleSpinBox {
+background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-top-right-radius: 5%;
+border-bottom-right-radius: 5%;
+margin: 2;
+}
+
+QDoubleSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QDoubleSpinBox::up-button { width: 0px;
+border:0;
+}
+
+QDoubleSpinBox::down-button { width: 0px;
+border: 0;
+}</string>
+   </property>
+   <property name="maximum">
+    <double>9999999999999.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="termLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: white;
+font: 14pt &quot;Sans Serif Collection&quot;;
+padding: 1;
+}</string>
+   </property>
+   <property name="text">
+    <string>Monthly term</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="withdrawalMonth">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>170</y>
+     <width>37</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSpinBox {
+background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-top-left-radius: 5%;
+border-bottom-left-radius: 5%;
+margin: 2;
+}
+
+QSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QSpinBox::up-button { width: 0px;
+border:0;
+}
+
+QSpinBox::down-button { width: 0px;
+border: 0;
+}</string>
+   </property>
+   <property name="maximum">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="replenishmentList">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>230</y>
+     <width>150</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QListWidget {background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+
+QScrollBar:vertical {
+width: 0px;
+}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="calculateButton">
+   <property name="geometry">
+    <rect>
+     <x>436</x>
+     <y>130</y>
+     <width>116</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+   </property>
+   <property name="text">
+    <string>Calculate</string>
+   </property>
+  </widget>
+  <widget class="QDoubleSpinBox" name="depositAmount">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>10</y>
+     <width>150</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Sans Serif Collection</family>
+     <pointsize>14</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QDoubleSpinBox {
+background-color: #323232;
+color: #ffffff;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QDoubleSpinBox:hover {
+background-color: #3B3B3B;
+}
+
+QDoubleSpinBox::up-button { width: 20px;
+border:0;
+}
+
+QDoubleSpinBox::down-button { width: 20px;
+border: 0;
+}</string>
+   </property>
+   <property name="maximum">
+    <double>9999999999999.000000000000000</double>
+   </property>
+  </widget>
+  <widget class="QLabel" name="periodicityLabel">
+   <property name="geometry">
+    <rect>
+     <x>315</x>
+     <y>10</y>
+     <width>237</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: white;
+font: 14pt &quot;Sans Serif Collection&quot;;
+padding: 1;
+}</string>
+   </property>
+   <property name="text">
+    <string>Periodicity of payments</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="resetButton">
+   <property name="geometry">
+    <rect>
+     <x>315</x>
+     <y>130</y>
+     <width>116</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: #b5adeb;
+color: #2e2c3c;
+font: 14pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}
+
+QPushButton:hover {
+background-color: #9690c2;
+}
+
+QPushButton:pressed {
+background-color: #9690c2;
+color: #605c7c;
+}</string>
+   </property>
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="accruedInterest">
+   <property name="geometry">
+    <rect>
+     <x>316</x>
+     <y>169</y>
+     <width>237</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: white;
+font: 14pt &quot;Sans Serif Collection&quot;;
+padding: 1;
+}</string>
+   </property>
+   <property name="text">
+    <string>Accrued interest:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="taxAmount">
+   <property name="geometry">
+    <rect>
+     <x>316</x>
+     <y>250</y>
+     <width>237</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: white;
+font: 14pt &quot;Sans Serif Collection&quot;;
+padding: 1;
+}</string>
+   </property>
+   <property name="text">
+    <string>Tax amount:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="endTermsAmount">
+   <property name="geometry">
+    <rect>
+     <x>316</x>
+     <y>340</y>
+     <width>237</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+color: white;
+font: 14pt &quot;Sans Serif Collection&quot;;
+padding: 1;
+}</string>
+   </property>
+   <property name="text">
+    <string>Deposit amount by the end:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="accruedInterestValue">
+   <property name="geometry">
+    <rect>
+     <x>316</x>
+     <y>199</y>
+     <width>237</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+padding-left: 10px;
+background-color: #323232;
+color: #ffffff;
+font: 18pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="taxAmountValue">
+   <property name="geometry">
+    <rect>
+     <x>316</x>
+     <y>288</y>
+     <width>237</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+padding-left: 10px;
+background-color: #323232;
+color: #ffffff;
+font: 18pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="endTermsAmountValue">
+   <property name="geometry">
+    <rect>
+     <x>316</x>
+     <y>376</y>
+     <width>237</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+padding-left: 10px;
+background-color: #323232;
+color: #ffffff;
+font: 18pt &quot;Sans Serif Collection&quot;;
+border-radius: 5%;
+margin: 2;
+}</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
