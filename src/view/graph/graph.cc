@@ -5,7 +5,7 @@
 namespace s21 {
 
 Graph::Graph(Controller *controller, QWidget *parent)
-    : controller_(controller), QWidget(parent), ui_(new Ui::Graph) {
+    : QWidget(parent), ui_(new Ui::Graph), controller_(controller) {
   ui_->setupUi(this);
   this->setWindowTitle("Graph of function");
   connect(ui_->buttonGraph, SIGNAL(clicked(bool)), this,

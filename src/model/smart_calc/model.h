@@ -18,7 +18,7 @@ class Model {
   Model() = default;
   ~Model() = default;
   int SmartCalc();
-  void SetExpression(std::string expression);
+  void SetExpression(std::string &expression);
   void SetXValue(double x);
   std::string GetExpression() const;
   double GetResult() const;

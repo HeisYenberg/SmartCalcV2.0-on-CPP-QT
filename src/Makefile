@@ -23,7 +23,7 @@ install: clean
 	cd view && qmake && make && make clean
 
 uninstall:
-	cd view && rm -rf Makefile ../$(APP) frontend.pro.user .qmake.stash .qtc_clangd .tmp
+	cd view && rm -rf Makefile ../$(APP) view.pro.user .qmake.stash .qtc_clangd .tmp
 
 open:
 	$(OPEN_APP)

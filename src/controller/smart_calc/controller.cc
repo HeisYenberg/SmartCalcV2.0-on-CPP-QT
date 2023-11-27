@@ -1,5 +1,7 @@
 #include "controller.h"
 
+#include <iostream>
+
 namespace s21 {
 
 Controller::Controller(Model *model) : model_(model) {}

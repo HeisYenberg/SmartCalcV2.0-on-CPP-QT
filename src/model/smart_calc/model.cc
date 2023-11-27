@@ -8,6 +8,7 @@ namespace s21 {
 
 int Model::SmartCalc() {
   setlocale(LC_ALL, "C");
+  std::string temp(expression_);
   int status = ParseExpression();
   while (status == kOk && !operations_.empty()) {
     status = Calculate();
@@ -19,18 +20,32 @@ int Model::SmartCalc() {
       status = kIncorrectExpression;
     }
   }
+  expression_ = std::move(temp);
   return status;
 }
 
-void Model::SetExpression(std::string expression) {
+void Model::SetExpression(std::string &expression) {
+  CleanStacks();
   expression_ = std::move(expression);
 }
 
 std::string Model::GetExpression() const { return expression_; }
 
-void Model::SetXValue(double x) { x_ = x; }
+void Model::SetXValue(double x) {
+  CleanStacks();
+  x_ = x;
+}
 
 double Model::GetResult() const { return result_; }
+
+void Model::CleanStacks() {
+  while (!numbers_.empty()) {
+    numbers_.pop();
+  }
+  while (!operations_.empty()) {
+    operations_.pop();
+  }
+}
 
 int Model::ParseExpression() {
   int status = kOk;
@@ -56,8 +71,8 @@ int Model::ParseExpression() {
     } else if (expression_[i] == 'm') {
       status = ReadMod(&i);
     } else if (strchr("+-*%/^", expression_[i])) {
-      expression_[i] = HandleUnarySign(expression_[i], last_read);
-      status = ReadBinaryOperation(expression_[i], &last_read, &i);
+      char type = HandleUnarySign(expression_[i], last_read);
+      status = ReadBinaryOperation(type, &last_read, &i);
     } else if (expression_[i] == '(' || expression_[i] == ')') {
       last_read = expression_[i];
       status = ReadBrackets(expression_[i]);
